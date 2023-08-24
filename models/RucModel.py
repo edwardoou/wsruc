@@ -6,10 +6,20 @@ class Ruc():
         self.tipo_contribuyente = ''
         self.nombre_comercial = ''
         self.fecha_inscripcion = ''
+        self.fecha_inicio = ''
         self.estado_contibuyente = ''
         self.condicion_contribuyente = ''
         self.domicilio_fiscal = ''
-        self.actividad_economica = ''
+        self.sistema_emision_comprobante = ''
+        self.actividad_comercio_exterior = ''
+        self.sistema_contabilidad = ''
+        self.actividades_economicas = ''
+        self.comprobantes_pago = ''
+        self.sistema_emision_electronica = ''
+        self.fecha_emisor_electronico = ''
+        self.comprobante_electronico = ''
+        self.afiliado_ple = ''
+        self.padrones = ''
 
     def to_json(self):
         return {
@@ -22,5 +32,14 @@ class Ruc():
             'estado_contibuyente': self.estado_contibuyente,
             'condicion_contribuyente': self.condicion_contribuyente,
             'domicilio_fiscal': self.domicilio_fiscal,
-            'actividad_economica': self.actividad_economica,
+            'sistema_emision_comprobante' : self.sistema_emision_comprobante,
+            'actividad_comercio_exterior' : self.actividad_comercio_exterior,
+            'sistema_contabilidad' : self.sistema_contabilidad,
+            'actividades_economicas' : self.actividades_economicas,
+            'comprobantes_pago' : self.comprobantes_pago,
+            'sistema_emision_electronica' : self.sistema_emision_electronica,
+            'fecha_emisor_electronico' : self.fecha_emisor_electronico,
+            'comprobante_electronico' : self.comprobante_electronico,
+            'afiliado_ple' : self.afiliado_ple,
+            'padrones' : self.padrones
         }
