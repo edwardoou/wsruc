@@ -1,7 +1,13 @@
 #from decouple import config
-import datetime
+#import datetime
 #import jwt
 #import pytz
+from dotenv import load_dotenv
+import os
+
+load_dotenv('.env')
+
+token: str = os.getenv('TOKEN')
 
 class Security():
     #secret = config('JWT_KEY')
@@ -27,7 +33,7 @@ class Security():
                 try:
                     encoded_token = authorization.split(" ")[1]
                     #payload = jwt.decode(encoded_token, cls.secret, algorithms=["HS256"])
-                    if encoded_token == 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.cThIIoDvwdueQB468K5xDc5633seEFoqwxjF_xSJyQQ':
+                    if encoded_token == token:
                       return True
                     else:
                       return False
